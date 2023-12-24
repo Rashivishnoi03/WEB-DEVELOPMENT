@@ -1,0 +1,43 @@
+#clockcontainer{
+    margin: auto;
+    border: 2px solid red;
+    width: 40vw;       /*viewport width*/
+    height: 40vw;
+    background: url(Digital\ clock.png) no-repeat;
+    background-size: 100%;
+    
+}
+
+#hour,#min,#sec{
+    position: relative;
+    background-color: black;
+    border-radius: 10px;
+}
+
+#hour{
+
+    height: 25%;
+    width: 1%;
+    top: 25%;
+    margin-left: 49.6%;
+    opacity: 0.8;
+    
+    
+}
+#min{
+    height: 15%;
+    width: 1%;
+    top: 8.8%;
+    margin-left: 19.5%;
+    opacity: 0.8;
+    display: none;
+    
+}
+#sec{
+    height: 18%;
+    width: 1%;
+    top: 8.8%;
+    margin-left: 19.5%;
+    opacity: 0.8;
+    display: none;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+    </div>
+
+    <script>
+       
+const Url= "https://dummyjson.com/products";
+
+async function getapi(Url) {
+
+const response = await fetch(Url);
+
+var data = await response.json();
+
+console.log(data);
+
+show(data.products);
+
+}
+
+function show(data) {
+
+let tab=`<table> 
+<tr>
+
+<th class="text-center">id</th>
+<th class="text-center">title </th>
+<th class="text-center">price</th>
+
+</tr>`;
+
+
+for (let r of data) {
+     tab += `< tr>
+
+<td>${r.id} </td>
+
+<td>${r.title}</td>
+
+<td>${r.price}</td>
+
+</tr>`;
+}
+tab+=`</table>`;
+document.getElementById("container").innerHTML = tab;
+
+}
+
+getapi(Url);
+</script>
+</body>
+</html>
